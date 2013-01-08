@@ -1,0 +1,202 @@
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,200italic,200,300italic,400italic);
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #505050;
+}
+
+#loginScreen {
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin: -150px 0 0 -200px
+}
+
+header {
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    background-color: #4D90FE;
+    z-index: 1;
+}
+
+header div {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: -0.09em;
+    color: #fff;
+    font-size: 40px;
+    vertical-align: 50%;
+    position: absolute;
+    height: 40px;
+    top: 50%;
+    margin-top: -20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#leftContainer, #rightContainer {
+    top: 50px;
+}
+
+
+#leftContainer {
+    position: relative;
+    height: 100%;
+    float: left;
+    width: 490px;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button, form input {
+    padding: 10px;
+    border: 1px solid #CDCDCD;
+    font-size: 14px;
+    color: #656565;
+    display: inline;
+}
+
+
+form input#taskInput {
+    float: left;
+    position: relative;
+    width: 40%;
+    margin-right: 5px;
+}
+
+form input#timeInput {
+    position: relative;
+}
+
+button, form input[type=submit] {
+    border-radius: 2px;
+    
+    color: #fff;
+
+    background-image: -moz-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: -ms-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: -o-linear-gradient(top,#4D90FE,#4787ED);
+    background-image: linear-gradient(top,#4D90FE,#4787ED);
+    border: 1px solid #3079ED;
+    background-color: #4D90FE;
+}
+button:hover, form input[type=submit]:hover {
+    border-color: #2f5bb7;
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top, #4d90fe, #357ae8);
+    background-image: -moz-linear-gradient(top, #4d90fe, #357ae8);
+    background-image: -ms-linear-gradient(top, #4d90fe, #357ae8);
+    background-image: -o-linear-gradient(top, #4d90fe, #357ae8);
+    background-image: linear-gradient(top, #4d90fe, #357ae8);
+}
+            
+button:active, form input[type=submit]:active {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
+}
+
+#completed div {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task {
+    display: block;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.task:hover {
+    background-color: #fff7d7;
+    cursor: pointer;
+}
+
+.taskName {
+    display: inline-block;
+}
+
+.deleteTaskButton {
+    font-weight: bold;
+    position: absolute;
+    right: 50px;
+}
+
+.deleteTaskButton:hover {
+    color: #FF7F6E;
+    cursor: pointer;
+}
+
+.rescheduleTaskButton {
+    position: absolute;
+    background-image: url("../icons/reschedule.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 20px;
+    width:20px;
+}
+
+.rescheduleTaskButton:hover {
+    background-image: url("../icons/reschedule-hover.png");
+    cursor:pointer;
+
+}
+
+.taskSchedule {
+    display: inline-block;
+    position: absolute;
+    right: 80px;
+}
+
+#rightContainer {
+    height: 100%;
+    position: fixed;
+    left: 530px;
+    border-left: 1px solid #EBEBEB;
+    padding-left: 20px;
+    padding-top: 20px;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    #leftContainer {
+        width: 300px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    #rightContainer {
+        left: 340px;
+
+    }
+    button, form input, .task {
+        padding: 8px;
+        font-size: 11px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.hideHeader {
+    visibility: hidden;
+}
+
+
+
